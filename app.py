@@ -21,6 +21,7 @@ if opcoes == 'Sexo':
     elif opcaoSex == 'Feminino': 
         titanic[titanic['Sex'] == 'female']
         st.write('Total = ',len(titanic[titanic['Sex'] == 'female' ]))
+
 if opcoes == 'Menores de 18 anos':
     st.title('Titanic : Menores de 18 anos')
     opcaoMenor = st.selectbox('Escolha a idade:',['','Entre 0 a 10 anos', 'Entre 11 a 17 anos'])
@@ -32,6 +33,7 @@ if opcoes == 'Menores de 18 anos':
         adolescente = titanic[(titanic['Age'] >= 11) & (titanic['Age'] <= 17)]
         adolescente
         st.write('Total = ',len(adolescente))
+        
 if opcoes == 'Adultos':
     st.title('Titanic : Adultos')
     idadeAdulto = st.selectbox('Escolha a idade:',['','Entre 18 a 35 anos','Mais de 35 anos'])
