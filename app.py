@@ -7,11 +7,14 @@ import numpy as np
 
 titanic = pd.read_csv('tested.csv')
 
+# Colocando uma palavra para meu título 
 st.sidebar.title('Menu')
 
+# Abrindo uma caixa de seleções para identificar o item que desejo 
 opcoes = st.sidebar.selectbox(
     'Selecione a opção',[
         'Sexo', 'Menores de 18 anos', 'Adultos','Não informaram idade' ,'Sobreviventes'])
+# Especificando a opção que desejo por meio dos 'ifs'
 if opcoes == 'Sexo':
     st.title('Titanic : Sexo dos passageiros e tripulantes')
     opcaoSex = st.selectbox('Escolha o sexo:',['','Masculino','Feminino'])
